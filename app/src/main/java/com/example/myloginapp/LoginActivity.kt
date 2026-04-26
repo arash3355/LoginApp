@@ -3,14 +3,13 @@ package com.example.myloginapp
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myloginapp.R
 import android.content.Intent
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
         val username = findViewById<EditText>(R.id.etUsername)
         val password = findViewById<EditText>(R.id.etPassword)
@@ -26,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             } else if (user == "abdul" && pass == "1234") {
                 Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this, WelcomeActivity::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Login Gagal!", Toast.LENGTH_SHORT).show()
